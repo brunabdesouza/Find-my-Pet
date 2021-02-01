@@ -12,7 +12,7 @@ puts "Created #{User.count} users"
 puts "Creating shelters..."
 Shelter.destroy_all
 
-s1 = Shelter.create! name: 'Urban Kittens', description: 'Urban Kittens is an affiliation of like minded individuals who care for the lost, abandoned and un-homed kittens and cats in the Bayside area of NSW.  We believe in the institution of mandatory desexing and the TNR of local cat colonies, working in conjunction with State and Local government bodies, to establish discounted pet chipping and desexing programs, as well as guidelines and policies in respect to the humane treatment of animals that come into their care.', address: 'Mascot, NSW, Sydney, 2020', user: u1
+s1 = Shelter.create! name: 'Urban Kittens', description: 'Urban Kittens is an affiliation of like minded individuals who care for the lost, abandoned and un-homed kittens and cats in the Bayside area of NSW.  We believe in the institution of mandatory desexing and the TNR of local cat colonies, working in conjunction with State and Local government bodies, to establish discounted pet chipping and desexing programs, as well as guidelines and policies in respect to the humane treatment of animals that come into their care.', address: 'Mascot, NSW, 2020', user: u1
 
 s2 = Shelter.create! name: 'RSPCA', description: 'The RSPCA in Australia is a federation, with an RSPCA in each state and territory and RSPCA Australia as the national body. The state and territory member Societies provide services to animals in need through their shelters and inspectorates.
 In the national office, RSPCA Australia works to influence animal welfare policy, practice and legislation across the country. We do this through various avenues, including working with government and industries, communicating and contributing to animal welfare science, running the RSPCA Approved Farming Scheme, and working with supporters through targeted advocacy and education campaigns.', address: 'Sydney Shelter 201 Rookwood Road Yagoona NSW 2199', user: u1
@@ -101,3 +101,8 @@ I could go home with a similar sized dog, preferably a female who is happy to pl
 My favourite things to do are taking a dip in my shell pool, playing with my toys and learning new skills using reward based training methods.', available: true, shelter_id: s6.id, sex: 'male', adoption_fee: '$400.00', image: 'https://res.cloudinary.com/petrescue/image/upload/h_638,w_638,c_pad,q_auto:best,f_auto/v1611446617/v2kqedi4otkpzunqse5b.jpg', desexed: true, vaccinated: true, wormed: true
 
 puts "Created #{Pet.count} pets"
+
+
+puts "User '#{u1.name}' has the shelter #{u1.shelters.first.name}"
+
+puts "The shelter '#{s2.name}' has the pets: #{s2.pets.second.name}"
