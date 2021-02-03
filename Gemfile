@@ -59,3 +59,5 @@ gem 'pry-rails'
 gem 'rack-cors'
 
 gem 'geocoder'
+
+gem 'knock'

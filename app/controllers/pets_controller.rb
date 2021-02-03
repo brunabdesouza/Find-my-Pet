@@ -1,12 +1,15 @@
 class PetsController < ApplicationController
   def show
 
-  end
+
+  end # show
 
   def index
+
     pets = Pet.all
     render json: pets
-  end # index 
+    
+  end # index
 
   def edit
   end
