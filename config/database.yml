@@ -25,4 +25,6 @@ test:
 
 production:
   <<: *default
-  database: find-my-pet-backend
+  database: find-my-pet-backend_production
+  username: find-my-pet-backend
+  password: <%= ENV['FIND-MY-PET-BACKEND_DATABASE_PASSWORD'] %>
