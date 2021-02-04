@@ -1,13 +1,13 @@
 class SheltersController < ApplicationController
 
   def index
-    shelter = Shelter.all
-    render json: shelter
+    shelters = Shelter.all
+    render json: shelters
   end
 
   def show
-    shelters = Shelter.find params[:id]
-    render json: shelters, include: [:pets]
+    shelter = Shelter.find params[:id]
+    render json: shelter, include: [:pets]
   end
 
   def edit
