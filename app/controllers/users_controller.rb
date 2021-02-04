@@ -3,6 +3,8 @@ class UsersController < ApplicationController
   before_action :authenticate_user, except: [:create]
 
   def new
+    user = User.new
+    render json: user
   end
 
   def current

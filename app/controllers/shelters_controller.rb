@@ -7,7 +7,7 @@ class SheltersController < ApplicationController
 
   def show
     shelters = Shelter.find params[:id]
-    render json: shelters
+    render json: shelters, include: [:pets]
   end
 
   def edit
